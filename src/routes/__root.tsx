@@ -4,6 +4,11 @@ import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import '../styles.css'
 
 const siteName = 'Shyam Bhakt Retail Solution | Your On-Ground Retail Partner'
+const gtmId = 'GTM-TSLFSQGG'
+const googleAdsId = 'AW-18496352527'
+const gtmScript = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${gtmId}');`
+const googleTagScript = `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${googleAdsId}');`
+
 const siteDescription = 'Practical retail business setup, marketing, accounts and documentation, staffing, and research support across West Bengal. Complete packages at ₹20,000 and monthly support at ₹2,000 for new and existing businesses.'
 
 export const Route = createRootRoute({
@@ -70,9 +75,18 @@ function RootDocument({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
+        {/* Google Tag Manager */}
+        <script dangerouslySetInnerHTML={{ __html: gtmScript }} />
+        {/* Google tag (gtag.js) for Google Ads */}
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${googleAdsId}`} />
+        <script dangerouslySetInnerHTML={{ __html: googleTagScript }} />
         <HeadContent />
       </head>
       <body>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`} height="0" width="0" style={{ display: 'none', visibility: 'hidden' }} title="Google Tag Manager" />
+        </noscript>
         {children}
         <Scripts />
       </body>
