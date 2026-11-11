@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shyam Bhakt Retail Solution - On-ground retail business setup, marketing, accounts & documentation, HR & staffing, research and reports across West Bengal.">
+  <title>Shyam Bhakt Retail Solution | Your On-Ground Retail Partner</title>
+  <style>
+    :root{
+      --navy:#0b1b35; --navy2:#12284a; --gold:#d9a52f; --gold2:#f1c75b;
+      --teal:#149b8a; --red:#c94a4a; --cream:#f7f6f0; --white:#fff;
+      --ink:#17233a; --muted:#657083; --line:#e4e7ec; --shadow:0 18px 45px rgba(11,27,53,.12);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1160px,92%);margin:auto}
+    .topbar{background:var(--navy);color:#fff;font-size:13px}
+    .topbar .container{display:flex;justify-content:space-between;gap:16px;padding:9px 0}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(228,231,236,.85)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:-.5px}
+    .logo{width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,var(--navy),var(--teal));display:grid;place-items:center;color:#fff;font-weight:900;box-shadow:0 8px 20px rgba(11,27,53,.2)}
+    .brand span{display:block}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:1.4px;text-transform:uppercase}
+    .navlinks{display:flex;align-items:center;gap:25px;font-weight:700;font-size:14px}
+    .navlinks a:hover{color:var(--teal)}
+    .navcta{display:flex;gap:8px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:12px;font-weight:800;border:1px solid transparent;transition:.2s;cursor:pointer}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--navy);color:#fff}
+    .btn-gold{background:var(--gold);color:#0b1b35}
+    .btn-outline{border-color:#ccd2db;color:var(--navy);background:#fff}
+    .hero{background:radial-gradient(circle at 85% 15%,rgba(217,165,47,.22),transparent 30%),linear-gradient(135deg,#f8f7f1 0%,#fff 60%);padding:92px 0 70px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:55px;align-items:center}
+    .eyebrow{color:#b27d0b;font-size:13px;font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+    h1{font-size:clamp(42px,6vw,72px);line-height:1.02;letter-spacing:-2.8px;color:var(--navy);margin-bottom:22px}
+    .hero h1 em{font-style:normal;color:var(--teal)}
+    .lead{font-size:19px;color:#5d6878;max-width:720px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 22px}
+    .mini-proof{display:flex;flex-wrap:wrap;gap:10px;color:#586476;font-size:13px;font-weight:700}
+    .mini-proof span{background:#fff;border:1px solid var(--line);padding:7px 10px;border-radius:999px}
+    .hero-card{background:var(--navy);color:#fff;border-radius:28px;padding:30px;box-shadow:var(--shadow);position:relative}
+    .hero-card:after{content:"";position:absolute;right:-25px;top:-25px;width:110px;height:110px;border-radius:50%;background:var(--gold);opacity:.18}
+    .hero-card h3{font-size:24px;margin-bottom:8px}
+    .hero-card p{color:#c8d0dd;margin-bottom:22px}
+    .price-big{font-size:52px;line-height:1;font-weight:900;color:var(--gold2)}
+    .price-label{color:#dbe1ea;font-weight:700}
+    .price-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+    .price-box{border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:16px}
+    .price-box strong{font-size:22px;display:block}
+    .strip{background:var(--teal);color:#fff;padding:16px 0;font-weight:800}
+    .strip .container{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+    section{padding:88px 0}
+    .section-head{text-align:center;max-width:800px;margin:0 auto 48px}
+    .section-head .eyebrow{margin-bottom:9px}
+    h2{font-size:clamp(32px,4vw,50px);line-height:1.08;letter-spacing:-1.7px;color:var(--navy)}
+    .section-head p{margin-top:15px;color:var(--muted);font-size:17px}
+    .problem{background:var(--cream)}
+    .three{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 8px 28px rgba(11,27,53,.05)}
+    .accent{height:5px;width:55px;border-radius:10px;margin-bottom:20px;background:var(--teal)}
+    .accent.gold{background:var(--gold)} .accent.red{background:var(--red)}
+    .card h3{font-size:21px;margin-bottom:10px;color:var(--navy)}
+    .card p{color:var(--muted)}
+    .industries{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:30px}
+    .pill{padding:10px 16px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:800;color:var(--navy)}
+    .services{background:#fff}
+    .service-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+    .service{border:1px solid var(--line);border-radius:22px;padding:24px;min-height:270px;background:linear-gradient(180deg,#fff,#fafbfc);transition:.2s}
+    .service:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .num{width:42px;height:42px;border-radius:12px;background:#edf6f5;color:var(--teal);display:grid;place-items:center;font-weight:900;margin-bottom:20px}
+    .service:nth-child(2) .num{background:#fff5dc;color:#a67509}.service:nth-child(3) .num{background:#edf2fb;color:#2666a8}.service:nth-child(4) .num{background:#fceeee;color:#b33f3f}
+    .service h3{font-size:20px;color:var(--navy);margin-bottom:12px}
+    .service ul{list-style:none;color:var(--muted);font-size:14px}
+    .service li{margin:9px 0;padding-left:17px;position:relative}
+    .service li:before{content:"✓";position:absolute;left:0;color:var(--teal);font-weight:900}
+    .pricing{background:var(--navy);color:#fff}
+    .pricing h2{color:#fff}.pricing .section-head p{color:#bdc7d5}
+    .pricing-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:22px;align-items:stretch}
+    .price-card{background:#fff;color:var(--ink);border-radius:25px;padding:32px}
+    .price-card.featured{border:3px solid var(--gold)}
+    .price-tag{font-size:64px;line-height:1;font-weight:950;color:var(--navy);letter-spacing:-3px}
+    .price-tag small{font-size:25px;vertical-align:top;letter-spacing:0}
+    .price-card h3{font-size:25px;color:var(--navy);margin-bottom:8px}
+    .price-card p{color:var(--muted)}
+    .price-list{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;margin:25px 0}
+    .price-list div{padding:10px 0;border-bottom:1px solid var(--line);font-weight:700}
+    .note{font-size:12px;color:#738093;margin-top:12px}
+    .monthly{background:#17345a;color:#fff;border-radius:25px;padding:32px;display:flex;flex-direction:column;justify-content:space-between}
+    .monthly .price-tag{color:var(--gold2)}.monthly p{color:#c4cddd}.monthly h3{font-size:25px}
+    .process{background:var(--cream)}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .step{position:relative}.stepno{font-size:48px;font-weight:950;color:rgba(11,27,53,.13);line-height:1}
+    .step h3{margin:8px 0;color:var(--navy)}.step p{color:var(--muted);font-size:14px}
+    .video-section{background:#fff}
+    .video-wrap{max-width:980px;margin:auto;border-radius:24px;overflow:hidden;background:#08152a;box-shadow:var(--shadow)}
+    video{display:block;width:100%;max-height:560px}
+    .video-caption{padding:18px 22px;background:#fff;border:1px solid var(--line);border-top:0;color:var(--muted);font-size:14px}
+    .cta{background:linear-gradient(135deg,var(--gold),#f4d47a);padding:70px 0}
+    .cta-box{display:flex;justify-content:space-between;align-items:center;gap:30px}
+    .cta h2{font-size:42px}.cta p{margin-top:10px;color:#4d4c42}
+    footer{background:#071327;color:#c8d0dc;padding:55px 0 90px}
+    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:35px}
+    footer h3{color:#fff;margin-bottom:13px}footer p,footer a{font-size:14px;color:#aeb8c8}footer a:hover{color:#fff}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:35px;padding-top:22px;font-size:12px;display:flex;justify-content:space-between;gap:15px}
+    .floating{position:fixed;right:18px;bottom:18px;z-index:100;display:flex;flex-direction:column;gap:10px}
+    .float-btn{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:22px;box-shadow:0 10px 25px rgba(0,0,0,.2);border:3px solid #fff}
+    .call{background:#1d5fd1}.wa{background:#1ebd63}
+    .mobile-menu{display:none}
+    @media(max-width:980px){
+      .navlinks{display:none}.mobile-menu{display:block}
+      .hero-grid,.pricing-grid{grid-template-columns:1fr}
+      .service-grid{grid-template-columns:repeat(2,1fr)}
+      .three{grid-template-columns:1fr}
+      .steps{grid-template-columns:repeat(2,1fr)}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:640px){
+      .topbar .container{justify-content:center;text-align:center}
+      nav{height:68px}.brand{font-size:14px}.logo{width:38px;height:38px}
+      .navcta .btn{padding:9px 11px;font-size:12px}
+      .navcta .btn-outline{display:none}
+      .hero{padding:60px 0 50px}h1{letter-spacing:-1.8px}.lead{font-size:17px}
+      section{padding:65px 0}
+      .service-grid,.steps,.footer-grid{grid-template-columns:1fr}
+      .price-list{grid-template-columns:1fr}
+      .price-tag{font-size:53px}
+      .cta-box{display:block}.cta h2{font-size:34px}.cta .btn{margin-top:20px;width:100%}
+      .footer-bottom{display:block}.footer-bottom div+div{margin-top:8px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <span>WEST BENGAL • ON-GROUND RETAIL BUSINESS PARTNER</span>
+      <span>Call / WhatsApp: <strong>7439718395</strong></span>
+    </div>
+  </div>
+
+  <header>
+    <nav class="container">
+      <a class="brand" href="#home" aria-label="Shyam Bhakt Retail Solution home">
+        <div class="logo">SB</div>
+        <div>Shyam Bhakt Retail Solution<small>Your On-Ground Retail Partner</small></div>
+      </a>
+      <div class="navlinks">
+        <a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#process">How It Works</a><a href="#contact">Contact</a>
+      </div>
+      <div class="navcta">
+        <a class="btn btn-outline" href="tel:+917439718395">Call</a>
+        <a class="btn btn-gold" target="_blank" rel="noopener" href="https://wa.me/917439718395?text=Hello%20Shyam%20Bhakt%20Retail%20Solution%2C%20I%20want%20to%20discuss%20my%20retail%20business.">WhatsApp</a>
+      </div>
+      <button class="btn btn-outline mobile-menu" onclick="document.getElementById('services').scrollIntoView()">☰</button>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Business Idea → Execution → Operations</div>
+          <h1>We turn business ideas into <em>operating businesses.</em></h1>
+          <p class="lead">One practical partner for the work required before and after launch — from setup and marketing to accounts, people, research and on-ground coordination across West Bengal.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/917439718395?text=Hello%2C%20I%20want%20a%20business%20setup%20consultation." target="_blank" rel="noopener">Start on WhatsApp →</a>
+            <a class="btn btn-outline" href="tel:+917439718395">☎ Call 7439718395</a>
+          </div>
+          <div class="mini-proof">
+            <span>New Business</span><span>Existing Business</span><span>Retail • Services • Food • More</span>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="eyebrow" style="color:#f1c75b">Simple, transparent package</div>
+          <h3>All 5 service areas</h3>
+          <p>Setup • Marketing • Accounts & Documentation • HR & Staffing • Research & Reports</p>
+          <div class="price-big">₹20,000</div>
+          <div class="price-label">Complete service package*</div>
+          <div class="price-row">
+            <div class="price-box"><strong>₹2,000</strong><span>Monthly package</span></div>
+            <div class="price-box"><strong>Flexible</strong><span>Individual services</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="strip"><div class="container"><span>Pharmacy</span><span>•</span><span>FMCG</span><span>•</span><span>Restaurant</span><span>•</span><span>Café</span><span>•</span><span>Textile / Fashion</span><span>•</span><span>Electrical</span><span>•</span><span>More</span></div></div>
+
+    <section class="problem">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">The Business Manager Approach</div>
+          <h2>You have the idea. We help coordinate the execution.</h2>
+          <p>Retail business owners often need multiple people and vendors for different tasks. Our role is to bring those requirements together and help move the work forward.</p>
+        </div>
+        <div class="three">
+          <div class="card"><div class="accent red"></div><h3>The Problem</h3><p>Property work, vendors, licences, hiring, promotion, documentation and operating systems can consume the owner's time.</p></div>
+          <div class="card"><div class="accent"></div><h3>Our Solution</h3><p>We act as an on-ground coordination partner: identify requirements, arrange suitable vendors/professionals and track execution.</p></div>
+          <div class="card"><div class="accent gold"></div><h3>The Outcome</h3><p>A more organised, launch-ready retail business with setup, people, promotion, documentation and operating support brought together.</p></div>
+        </div>
+        <div class="industries">
+          <span class="pill">Pharmacy</span><span class="pill">FMCG</span><span class="pill">Restaurant</span><span class="pill">Café</span><span class="pill">Textile / Fashion</span><span class="pill">Electrical</span><span class="pill">And More</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Our 5 Service Areas</div>
+          <h2>One partner. Five business support pillars.</h2>
+          <p>Choose the complete package or select only the individual service you need.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service"><div class="num">01</div><h3>Setup</h3><ul><li>Business setup planning</li><li>Property & vendor coordination</li><li>Store readiness support</li><li>Pre-launch checklist</li><li>Third-party coordination</li></ul></article>
+          <article class="service"><div class="num">02</div><h3>Marketing</h3><ul><li>Local marketing planning</li><li>Online promotion support</li><li>Offer & campaign ideas</li><li>Basic branding coordination</li><li>Customer acquisition planning</li></ul></article>
+          <article class="service"><div class="num">03</div><h3>Accounts & Documentation</h3><ul><li>Basic accounting setup</li><li>GST / entity coordination</li><li>UPI merchant onboarding</li><li>Banking & loan support coordination</li><li>Applicable licence coordination</li></ul></article>
+          <article class="service"><div class="num">04</div><h3>HR & Staffing</h3><ul><li>Manpower requirement planning</li><li>Staff sourcing coordination</li><li>Interview & selection support</li><li>Joining documentation support</li><li>Basic staffing process setup</li></ul></article>
+          <article class="service"><div class="num">05</div><h3>Research & Reports</h3><ul><li>Market research</li><li>Competitor checks</li><li>Local area study</li><li>Business feasibility reports</li><li>Action-oriented business reports</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow" style="color:#f1c75b">Pricing</div>
+          <h2>Choose the support level that fits your business.</h2>
+          <p>Simple packages, with individual services available when you don't need everything.</p>
+        </div>
+        <div class="pricing-grid">
+          <div class="price-card featured">
+            <div class="eyebrow">Complete Package</div>
+            <h3>All 5 Service Areas</h3>
+            <div class="price-tag"><small>₹</small>20,000</div>
+            <p>One-time service charge for the complete business support package.</p>
+            <div class="price-list">
+              <div>✓ Setup</div><div>✓ Marketing</div><div>✓ Accounts & Documentation</div><div>✓ HR & Staffing</div><div>✓ Research & Reports</div><div>✓ On-ground coordination</div>
+            </div>
+            <a class="btn btn-primary" href="https://wa.me/917439718395?text=Hello%2C%20I%20am%20interested%20in%20the%20%C2%A520%2C000%20Complete%20Package." target="_blank" rel="noopener">Discuss Complete Package</a>
+            <div class="note">*Government, statutory, professional, vendor, advertising, licence or other third-party charges—where applicable—are separate and payable by the client.</div>
+          </div>
+          <div class="monthly">
+            <div>
+              <div class="eyebrow" style="color:#f1c75b">Monthly Support</div>
+              <h3>Ongoing Business Support</h3>
+              <div class="price-tag"><small>₹</small>2,000</div>
+              <p>Monthly package for continued coordination and business support after setup.</p>
+            </div>
+            <a class="btn btn-gold" href="https://wa.me/917439718395?text=Hello%2C%20I%20want%20to%20know%20about%20the%20%C2%A52%2C000%20Monthly%20Package." target="_blank" rel="noopener">Ask About Monthly Support</a>
+          </div>
+        </div>
+        <p style="text-align:center;margin-top:22px;color:#bdc7d5;font-size:14px">Individual services are also available. Contact us to discuss your requirement.</p>
+      </div>
+    </section>
+
+    <section id="process" class="process">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">How It Works</div>
+          <h2>From requirement to action plan.</h2>
+        </div>
+        <div class="steps">
+          <div class="step"><div class="stepno">01</div><h3>Tell us your business</h3><p>Share your idea, existing business status, location and immediate requirements.</p></div>
+          <div class="step"><div class="stepno">02</div><h3>We map the requirements</h3><p>We identify setup, marketing, people, documentation and research needs.</p></div>
+          <div class="step"><div class="stepno">03</div><h3>Coordinate execution</h3><p>We help coordinate suitable vendors, professionals and on-ground tasks.</p></div>
+          <div class="step"><div class="stepno">04</div><h3>Track & support</h3><p>We help bring the moving parts together and provide ongoing support where selected.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="video-section">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Business Overview</div>
+          <h2>See the business model in detail.</h2>
+          <p>The presentation below is included as the reference material supplied for this website.</p>
+        </div>
+        <div class="video-wrap">
+          <video controls preload="metadata" poster="assets/video-poster.jpg">
+            <source src="assets/reference-presentation.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+          <div class="video-caption">Reference presentation — Shyam Bhakt Retail Solution. The website content has been adapted into a customer-friendly service website.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="cta">
+      <div class="container cta-box">
+        <div><div class="eyebrow" style="color:#75560b">Let's discuss your business</div><h2>Have an idea? Let's take it to the ground.</h2><p>Call or WhatsApp us for a requirement discussion.</p></div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <a class="btn btn-primary" href="tel:+917439718395">☎ 7439718395</a>
+          <a class="btn btn-outline" target="_blank" rel="noopener" href="https://wa.me/917439718395?text=Hello%20Shyam%20Bhakt%20Retail%20Solution%2C%20I%20want%20to%20discuss%20my%20business.">WhatsApp Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div><h3>Shyam Bhakt Retail Solution</h3><p>Your on-ground retail partner for new and existing businesses across West Bengal.</p></div>
+        <div><h3>Contact</h3><p><a href="tel:+917439718395">7439718395 — Call</a></p><p><a href="https://wa.me/917439718395" target="_blank" rel="noopener">7439718395 — WhatsApp</a></p><p><a href="mailto:ShyamBhaktRetailSolution@gmail.com">ShyamBhaktRetailSolution@gmail.com</a></p></div>
+        <div><h3>Services</h3><p>Setup</p><p>Marketing</p><p>Accounts & Documentation</p><p>HR & Staffing</p><p>Research & Reports</p></div>
+      </div>
+      <div class="footer-bottom"><div>© 2026 Shyam Bhakt Retail Solution. All rights reserved.</div><div>West Bengal, India • New & Existing Businesses</div></div>
+    </div>
+  </footer>
+
+  <div class="floating" aria-label="Quick contact">
+    <a class="float-btn call" href="tel:+917439718395" aria-label="Call Shyam Bhakt Retail Solution">☎</a>
+    <a class="float-btn wa" target="_blank" rel="noopener" href="https://wa.me/917439718395?text=Hello%20Shyam%20Bhakt%20Retail%20Solution%2C%20I%20want%20to%20discuss%20my%20business." aria-label="WhatsApp Shyam Bhakt Retail Solution">◔</a>
+  </div>
+</body>
+</html>
